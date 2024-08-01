@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSTI Test</title>
+</head>
+<body>
+<h1>SSTI Test Page</h1>
+<form method="get" action="/ssti2">
+    <label for="input">Enter your payload:</label>
+    <input type="text" id="input" name="input">
+    <input type="submit" value="Submit">
+</form>
+<h2>Output:</h2>
+<!-- Render user input directly here -->
+<p>User input:</p>
+<p>{{.UserInput}}</p>
+</body>
+</html>

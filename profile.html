@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script>
+        // Function to get token from URL and fetch user info
+        async function getUserData() {
+            let qs = location.search
+            let params = new URLSearchParams(qs);
+            const resp = await fetch("/profile/info?userid="+params.get("userid"), {
+                    method:"GET",
+                }
+            )
+            const data = await resp.json()
+            console.log(data);
+
+            document.getElementById("userid").innerHTML = data["userID"]
+            document.getElementById("username").innerHTML = data["username"]
+        }
+
+        window.onload = getUserData;
+    </script>
+</head>
+<body>
+<h1>Profile Page</h1>
+<button id="getUserInfo">Get User Info</button>
+<div>User Name: </div> <div id="username"></div>
+<div>User ID: </div> <div id="userid"></div>
+
+</body>
+</html>

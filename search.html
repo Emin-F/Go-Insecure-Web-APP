@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My E-Commerce Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .header .nav-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .products {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .product p {
+            color: #007bff;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        .product button {
+            padding: 10px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="#">My E-Commerce Store</a>
+        </div>
+        <nav>
+            <a href="/search">XSS</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/file">Path Traversal</a>
+            <a href="/ssti">SSTI</a>
+            <a href="/rce">RCE </a>
+            <a href="/contact"></a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Welcome to My E-Commerce Store!</h1>
+    <p>Discover amazing products and deals just for you.</p>
+    <button onclick="window.location.href='/shop'">Shop Now</button>
+</section>
+
+<section class="products">
+    <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>$39.99</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 My E-Commerce Store. All rights reserved.</p>
+</footer>
+</body>
+</html>
